@@ -1,0 +1,6 @@
+@import "mixin/font-face";
+
+@include font-face("source_sans_problack", "../fonts/SourceSansPro-Black/SourceSansPro-Black", 900);
+@include font-face("source_sans_probold", "../fonts/SourceSansPro-Bold/SourceSansPro-Bold", 700);
+@include font-face("source_sans_prosemibold", "../fonts/SourceSansPro-SemiBold/SourceSansPro-SemiBold", 600);
+@include font-face("source_sans_proregular", "../fonts/SourceSansPro-Regular/SourceSansPro-Regular");

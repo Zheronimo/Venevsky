@@ -1,0 +1,22 @@
+// ЦВЕТА
+$white: #ffffff;
+$black: #000000;
+
+// РАЗМЕРЫ
+$base-font-size: 16px;
+$content-size: 1240px; 
+
+
+// ШРИФТЫ
+$main-font: 'source_sans_proregular', Arial, sans-serif;
+
+$breakpoints: (
+	"phone": 400px,
+	"phone-wide": 480px,
+	"phablet": 560px,
+	"tablet-smal": 640px,
+	"tablet": 768px,
+	"tablet-wide": 1024px,
+	"desktop": 1248px,
+	"desktop-wide": 1440px
+);
