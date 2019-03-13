@@ -1,0 +1,28 @@
+.location {
+	flex: 0 0 175px;
+	width: 175px;
+	&__header {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		& > * {
+			&:not(:last-child) {margin-right: 10px;}
+		}
+	}
+	&__icon {
+		@include size(12px);
+	}
+	&__current {
+		display: flex;
+		align-items: center;
+		&::after {
+			content: '';
+			margin-left: 8px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 4.5px 0 4.5px;
+			border-color: $black transparent transparent transparent;
+		}
+	}
+}

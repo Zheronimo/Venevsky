@@ -1,0 +1,17 @@
+.basket-prev {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+	&__icon {
+		@include size(25px);
+		fill: $white;
+	}
+	&__title {
+		font-family: $bold-font;
+		line-height: 20px;
+	}
+	&__count {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}

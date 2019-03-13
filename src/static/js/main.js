@@ -1,6 +1,13 @@
 $(document).ready(function() {
 	svg4everybody({});
 
+	let sandwich = function () {
+  		$(document).on("click",".sandwich", function () {
+		$(this).toggleClass("sandwich--active");
+		});
+	};
+
+	sandwich();
 });
 
 

@@ -54,6 +54,15 @@
 @mixin lh($siaze1,$size2){
 	line-height: ($siaze1/$size2)*1em;
 }
+@mixin shift($property: all, $duration: .3s, $ease: linear) {
+	transition: $property $duration $ease;
+}
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
 
 @mixin desktop(){
 	@media screen and (max-width: 1200px){

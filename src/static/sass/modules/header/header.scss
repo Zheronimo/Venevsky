@@ -1,0 +1,28 @@
+.header {
+	.container {
+		display: flex;
+		align-items: center;
+	}
+	&-top {
+		padding: 12px 0;
+		&__location {
+			margin-right: 80px;
+		}
+		&__user-nav {
+			margin-left: auto;
+		}
+	}
+	&-main {
+		padding: 20px 0;
+		background-color: $dark-bg-color;
+		color: $white;
+		.container {
+			& > * {
+				&:not(:last-child) { margin-right: 40px; }
+			}
+		}
+		&__basket-prev {
+			margin-left: auto;
+		} 
+	}
+}

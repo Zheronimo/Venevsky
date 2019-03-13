@@ -1,0 +1,73 @@
+@import "location";
+
+.sandwich {
+	height: 14px;
+	width: 23px;
+	position: relative;
+	cursor: pointer;
+	&--active {
+		.sandwich__line {
+			&--top {
+				top: 6px;
+				transform: rotate(45deg);
+			}
+			&--middle {opacity: 0;}
+			&--bottom {
+				top: 6px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__line {
+		display: block;
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		@include shift;
+		background-color: $white;
+		&--top {top: 0;}
+		&--middle {top: 6px;}
+		&--bottom {top: 12px;}
+	}
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	&__text {
+		font-size: 12px;
+	}
+}
+.search {
+	display: flex;
+	align-items: center;
+	&__icon {
+		margin-left: 10px;
+		@include size(22px);
+		fill: $white;
+	}
+	.input-field {
+		flex: 0 0 225px;
+		width: 225px;
+	}
+}
+.order-callback {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+	&__description {
+		font-size: 12px;
+	}
+	&__phone {
+		font-size: 24px;
+		font-family: $boldest-font;
+		color: $main-action-color;
+		line-height: 30px;
+	}
+	&__link {
+		font-family: $medium-font;
+		font-size: 14px;
+		text-decoration: underline;
+		color: $white;
+	}
+}
