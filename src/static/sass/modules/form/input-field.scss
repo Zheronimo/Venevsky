@@ -6,7 +6,7 @@
 	box-shadow: none;
 	border: 1px solid $input-border-color;
 	@include placeholder {
-		color: $placeholder-color;
+		color: $text-info-color;
 	}
 	&.input-field {
 		&--size-small {

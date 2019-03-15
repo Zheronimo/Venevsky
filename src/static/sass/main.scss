@@ -1,5 +1,4 @@
-@import "../../../node_modules/normalize-scss/fork-versions/default/_normalize.scss";
-@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import 'layout/libs';
 @import 'layout/mixin/mixins';
 @import 'layout/fonts';
 @import 'layout/vars';
@@ -54,6 +53,7 @@ textarea {
 
 section {
 	position: relative;
+	padding: 40px 0;
 }
 
 input,
