@@ -1,0 +1,51 @@
+.advantages {
+		display: flex;
+		& > * {
+			flex: 1;
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+}
+.advantage {
+	display: flex;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+	   & > * {
+		   	&:not(:last-child) {
+		   		margin-right: 15px;
+		   	}
+	  	}
+	&__icon {
+		fill: $main-action-color;
+		&.icon {
+			&-warranty {
+				height: 64px;
+				width: 43px;
+			}
+			&-support {
+				@include size(50px);
+			}
+			&-sample {
+				height: 48px;
+				width: 54px;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 4px;
+		font-family: $medium-font;
+	}
+
+	&__text {
+		font-size: 14px;
+		letter-spacing: 0.25px;
+		color: $text-info-color;
+	}
+	&__link {
+		margin-top: 8px; 
+		font-size: 14px;
+		text-decoration: underline;
+		font-family: $medium-font;
+	}
+}
