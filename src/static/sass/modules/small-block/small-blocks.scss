@@ -1,9 +1,8 @@
 @import "location";
 @import "banner";
+@import "section";
 
-.s-bg-white {
-	background-color: $white;
-}
+
 .sandwich {
 	height: 14px;
 	width: 23px;
@@ -74,4 +73,9 @@
 		text-decoration: underline;
 		color: $white;
 	}
+}
+
+.count-text {
+	font-size: 14px;
+	color: $text-info-color;
 }
