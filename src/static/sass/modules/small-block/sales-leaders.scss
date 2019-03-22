@@ -1,0 +1,62 @@
+.sales-leaders {
+	&__row {
+		display: flex;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+	&__col {
+		flex: 1;
+	}
+}
+.sales-leader {
+	display: block;
+	height: 240px;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	background-color: $white;
+	@include shift();
+	&:hover {
+		border-color: $main-action-color;
+	}
+	&.sales-leader{
+		&--big {
+			height: 400px;
+			.sales-leader {
+				&__img {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 280px;
+					img {
+						max-height: 280px;
+						max-width: 100%
+					}
+				}
+				&__name {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+	&__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 140px;
+		margin-bottom: 10px;
+		img {
+			max-width: 100%;
+			max-height: 140px;
+		}
+	}
+	&__name {
+		font-family: $bold-font;
+		line-height: 1.25;
+	}
+}
