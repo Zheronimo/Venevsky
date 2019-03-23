@@ -35,6 +35,7 @@
 		&--bottom {top: 12px;}
 	}
 }
+
 .logo {
 	display: flex;
 	flex-direction: column;
@@ -42,6 +43,7 @@
 		font-size: 12px;
 	}
 }
+
 .search {
 	display: flex;
 	align-items: center;
@@ -55,6 +57,7 @@
 		width: 225px;
 	}
 }
+
 .order-callback {
 	display: flex;
 	flex-direction: column;
@@ -79,4 +82,32 @@
 .count-text {
 	font-size: 14px;
 	color: $text-info-color;
+}
+
+.slider-nav {
+	@include vcenter('y');
+	opacity: 0.5;
+	@include shift();
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+	&.slider-nav {
+		&--prev {
+			left: -55px;
+		}
+		&--next {
+			right: -55px;
+		}
+	}
+	&.slick-disabled {
+		cursor: default;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	&__icon {
+		fill: $base-text-color;
+		@include size(30px);
+	}
 }
