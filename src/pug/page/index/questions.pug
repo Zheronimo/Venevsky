@@ -1,4 +1,21 @@
-section.s-questions.s-size-small
+section.s-questions
 	.container
 		.questions
-	
+			.upgrade
+				+icon("question","upgrade__icon")
+				a(href="").link.link-underline Что можно улучшить на этой странице?
+			.ask-you-question
+				span.ask-you-question__text Задайте вопрос
+				ul.ask-you-question__list
+					li.ask-you-question__item
+						a.ask-you-question__link(href="")
+							+icon("messenger","ask-you-question__icon")
+							span.ask-you-question__text Messenger
+					li.ask-you-question__item
+						a.ask-you-question__link(href="")
+							+icon("vk","ask-you-question__icon")
+							span.ask-you-question__text Вконтакте
+					li.ask-you-question__item
+						a.ask-you-question__link(href="")
+							+icon("telegram","ask-you-question__icon")
+							span.ask-you-question__text Telegram

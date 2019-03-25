@@ -1,3 +1,4 @@
+@import "links";
 @import "location";
 @import "banner";
 @import "section";
@@ -74,8 +75,6 @@
 	&__link {
 		font-family: $medium-font;
 		font-size: 14px;
-		text-decoration: underline;
-		color: $white;
 	}
 }
 
@@ -109,5 +108,57 @@
 	&__icon {
 		fill: $base-text-color;
 		@include size(30px);
+	}
+}
+
+.upgrade {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	& > * {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__icon {
+		@include size(16px);
+		fill: #bababa;
+	}
+}
+
+.questions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ask-you-question {
+	display: flex;
+	align-items: center;
+	& > * {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	&__list {
+		display: flex;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__icon {
+		@include size(24px);
+		fill: base-text-color;
 	}
 }
