@@ -1,0 +1,137 @@
+.footer {
+	color: $white;
+	background-color: $dark-bg-color;
+	&-top {
+		padding: 30px 0 20px;
+	}
+
+	&-main {
+		padding: 20px 0 30px;
+		.container {
+			display: flex;
+			& > * {
+				flex: 1;
+				&:not(:last-child) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	&-callback {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+		&__img {
+			width: 78px;
+			height: 52px;
+		}
+	}
+
+	&-bottom {
+		padding: 10px 0;
+		background-color: $darkes-bg-color;
+		font-size: 12px;
+		color: rgba($white, 0.6);
+		.container {
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__line {
+			& > * {
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+			}
+		}
+		&__link {
+			color: rgba($white, 0.6);
+			text-decoration: underline;
+		}
+	}
+
+	&__title {
+		display: block;
+		font-family: $bold-font;
+		margin-bottom: 15px;
+	}
+
+	&-nav {
+		&__list {
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__item {
+			font-size: 14px;
+			& > * {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+		}
+		&__link {
+			color: $white;
+		}
+		&__descr {
+			font-size: 12px;
+			color: rgba($white, .6);
+		}
+	}
+
+	&__block {
+		margin-bottom: 40px;
+		&:last-child { margin-bottom: 0; }
+	}
+
+	&-contacts {
+		position: relative;
+		padding-left: 25px;
+		&__icon {
+			@include size(16px);
+			fill: $white;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&__title {
+			font-size: 14px;
+			font-family: $medium-font;
+			display: block;
+			margin-bottom: 10px;
+		}
+		&__text {
+			font-size: 12px;
+		}
+		&__link {
+			margin-left: 10px;
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+}
+
+.payment-types {
+	&__list {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+		margin-bottom: 15px;
+	}
+	&__logo {
+		height: 15px;
+	}
+}
