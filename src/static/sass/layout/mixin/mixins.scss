@@ -30,11 +30,11 @@
 @mixin box{
 	box-sizing: border-box;
 }
-@mixin gw($color1, $color2){
-	background-image:(linear-gradient($color1, $color2));
+@mixin gv($whay, $color1, $color2){
+	background-image:(linear-gradient($whay, $color1, $color2));
 }
-@mixin gh($color1, $color2){
-	background-image:(linear-gradient(left, $color1, $color2));
+@mixin gh($whay, $color1, $color2){
+	background-image:(linear-gradient($whay, $color1, $color2));
 }
 	
 @mixin rem($size){

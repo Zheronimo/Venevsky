@@ -3,11 +3,13 @@
 	align-items: center;
 	background-color: $main-action-color;
 	cursor: pointer;
-	padding: 10px 20px;
+	padding: 8px 20px;
 	border: 0;
 	font-family: $medium-font;
 	line-height: 20px;
+	border: 2px solid transparent;
 	border-radius: 4px;
+	white-space: nowrap;
 	&:hover {
 		background-color: #f0de01;
 	}
@@ -20,12 +22,30 @@
 		@include size(25px);
 	}
 	&.btn {
+		&--size {
+			&-small {
+				padding: 3px 15px;
+			}
+		}
 		&--fill {
 			width: 100%;
 			justify-content: center;
 		}
 		&--disabled {
 			opacity: 0.5;
+		}
+		&--bg {
+			&-green {
+				background-color: $button-green-color;
+				color: $white;
+			}
+		}
+		&--border {
+			&-green {
+				border: 2px solid $button-green-color;
+				background-color: $white;
+				color: $button-green-color;
+			}
 		}
 	}
 }

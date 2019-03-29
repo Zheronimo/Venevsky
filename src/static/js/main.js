@@ -2,8 +2,11 @@ $(document).ready(function() {
 	svg4everybody({});
 
 	let sandwich = function () {
-  		$(document).on("click",".sandwich", function () {
-		$(this).toggleClass("sandwich--active");
+  		$(document).on("click",".catalog-nav__header", function () {
+  			let sandwich = $(this).find(".sandwich"),
+  				catalog = $(this).parent();
+			sandwich.toggleClass("sandwich--active");
+			catalog.toggleClass("catalog-nav--active");
 		});
 	};
 
@@ -33,9 +36,26 @@ $(document).ready(function() {
 		});
 	};
 
+	let locationChoose = function () {
+		$(document).on('click','.location-question__btn',function () {
+			let answer = $(this).data('location');
+			$(this).closest('.location-question').hide();
+			if (answer === 'no') {
+				$(this).closest('.location__body').addClass('is-location-choose');
+			}
+		});
+		$(document).on('click','.location-choose__item',function () {
+			$(this).closest('.location').removeClass('is-location-choose');
+		});
+		$(document).on('click','.location__header',function () {
+			$(this).siblings('.location__body').addClass('is-location-choose');
+		});
+	}
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
+	locationChoose();
 });
 
 let popularCategoriesSlider = function () {

@@ -1,0 +1,40 @@
+mixin catalogSubnavItem(link,text,count)
+	li.catalog-subnav__item
+		a(href=link).catalog-subnav__link
+			span.catalog-subnav__text=text
+			span.count-text=count
+
+.catalog-subnav(data-simplebar)
+	.catalog-subnav__inner
+		.catalog-subnav__col
+			.catalog-subnav__block
+				.catalog-subnav__header
+					span.catalog-subnav__title Прямоугольный водосток
+					span.count-text 9
+				ul.catalog-subnav__list
+					+catalogSubnavItem("","Прямоугольные оцинкованные трубы водостока","21")
+					+catalogSubnavItem("","Соединители прямоугольных желобов водостока","21")
+					+catalogSubnavItem("","Воронка водостока прямоугольная оцинкованная","21")
+					+catalogSubnavItem("","Заглушка прямоугольного водостока оцинкованная","21")
+					+catalogSubnavItem("","Крепление прямоугольного водостока","21")
+			.catalog-subnav__block
+				.catalog-subnav__header
+					span.catalog-subnav__title Прямоугольный водосток
+					span.count-text 9
+				ul.catalog-subnav__list
+					+catalogSubnavItem("","Прямоугольные оцинкованные трубы водостока","21")
+					+catalogSubnavItem("","Соединители прямоугольных желобов водостока","21")
+					+catalogSubnavItem("","Воронка водостока прямоугольная оцинкованная","21")
+					+catalogSubnavItem("","Заглушка прямоугольного водостока оцинкованная","21")
+					+catalogSubnavItem("","Крепление прямоугольного водостока","21")
+		.catalog-subnav__col
+			.catalog-subnav__block
+				.catalog-subnav__header
+					span.catalog-subnav__title Прямоугольный водосток
+					span.count-text 9
+				ul.catalog-subnav__list
+					+catalogSubnavItem("","Прямоугольные оцинкованные трубы водостока","21")
+					+catalogSubnavItem("","Соединители прямоугольных желобов водостока","21")
+					+catalogSubnavItem("","Воронка водостока прямоугольная оцинкованная","21")
+					+catalogSubnavItem("","Заглушка прямоугольного водостока оцинкованная","21")
+					+catalogSubnavItem("","Крепление прямоугольного водостока","21")
