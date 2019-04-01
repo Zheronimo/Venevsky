@@ -50,12 +50,27 @@ $(document).ready(function() {
 		$(document).on('click','.location__header',function () {
 			$(this).siblings('.location__body').addClass('is-location-choose');
 		});
-	}
+	};
+
+	let popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false
+		});
+		$(document).on('click','.popup__close', function () {
+			$.magnificPopup.close()
+		});
+	};
+
+	$('file-upload input[type=file]').change(function() {
+		let fileName = $(this).val().replace(/.*\\/,"");
+		$(this).closest('.file-upload').find('.file-upload__text').html(fileName);
+	});
 
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	locationChoose();
+	popupLink();
 });
 
 let popularCategoriesSlider = function () {

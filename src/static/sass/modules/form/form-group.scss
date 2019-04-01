@@ -1,0 +1,41 @@
+.form-group {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	&.form-group {
+		&--required {
+			.form-group {
+				&__label {
+					&::after {
+						content: "*";
+						color: $warning-color;
+						position: absolute;
+						top: -5px;
+						right: -10px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		&--width {
+			&-m {
+				max-width: 245px;
+			}
+		}
+	}
+	&__label {
+		position: relative;
+		margin-bottom: 10px;
+		color: $text-label-color;
+		font-size: 12px;
+		letter-spacing: 0.65px;
+		text-transform: uppercase;
+	}
+	&-submit {
+		display: flex;
+		& > * {
+			&:not(:last-child) { margin-right: 20px; }
+		}
+	}
+}

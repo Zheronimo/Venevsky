@@ -1,0 +1,32 @@
+.popup.mfp-hide#popup-consultation
+	.hide-on-success
+		.popup__header
+			span.popup__title Получить консультацию
+			.popup__close
+				+icon("close","popup__close-icon")
+		.popup__body
+			form.form(action="")
+				.form__body
+					.form-line
+						.form-group.form-group--required.form-group--width-m
+							label.form-group__label Контактный телефон
+							input(type="phone" placeholder="+7(912)123-34-45").input-field
+					.form-line
+						.form-group
+							label.form-group__label Вопрос или коментарий
+							textarea(placeholder="Здравствуйте, меня интересует...").textarea-field
+					.form-line
+						.form-group
+							label.file-upload
+								input(type="file")
+								.file-upload__custom
+									+icon("attachment","file-upload__icon")
+									span.file-upload__text Прикрепить файл
+				.form__footer
+					.form-line
+						.form-group.form-group--width-m
+							input(type="submit" value="Получить консультацию").btn.btn--size-big
+						span.form-line__info.form-line__info--color-green Ответим в течении 10 минут
+					.form-line
+						p.form-info Задавая вопрос, вы соглашаетесь с <a href="" class="form-info__link">политикой конфиденциальности</a>
+	.show-on-success

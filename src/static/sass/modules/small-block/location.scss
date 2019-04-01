@@ -6,6 +6,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		position: relative;
 		& > * {
 			&:not(:last-child) {margin-right: 10px;}
 		}
@@ -19,15 +20,24 @@
 	}
 	&__icon {
 		@include size(12px);
+		flex-shrink: 0;
+		fill: $base-text-color;
 	}
 	&__current {
-		display: flex;
-		align-items: center;
+		padding-right: 10px;
+		overflow: hidden;
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 		&::after {
 			content: '';
 			margin-left: 8px;
 			width: 0;
 			height: 0;
+			position: absolute;
+			z-index: 1;
+			top: 6px;
+			right: 0;
 			border-style: solid;
 			border-width: 4px 4.5px 0 4.5px;
 			border-color: $black transparent transparent transparent;

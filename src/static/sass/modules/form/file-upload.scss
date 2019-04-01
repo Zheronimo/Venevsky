@@ -1,0 +1,22 @@
+.file-upload {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  input[type="file"] { display: none; }
+  &__custom {
+        display: flex;
+        align-items: center;
+        & > * {
+            &:not(:last-child) { margin-right: 10px; }
+        }
+    }
+    &__icon {
+        @include size(16px);
+        fill: $button-green-color;
+    }
+    &__text {
+        font-size: 14px;
+        font-family: $bold-font;
+        color: $button-green-color;
+    }
+}

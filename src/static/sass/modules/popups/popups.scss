@@ -1,0 +1,43 @@
+.popup {
+	position: relative;
+	max-width: 520px;
+	margin: 50px auto;
+	border-radius: 8px;
+	overflow: hidden;
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 15px 25px 15px 40px;
+		background-color: $light-bg-color;
+
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	&__close {
+		@include size(30px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		cursor: pointer;
+		opacity: .2;
+		@include shift();
+		&:hover {
+			opacity: .7;
+		}
+		&-icon {
+			@include size(16px);
+		}
+	}
+	&__body {
+		background-color: $white;
+		padding: 40px;
+	}
+}
+.mfp-bg {
+	background-color: $base-text-color;
+	opacity: .3;
+}
+
