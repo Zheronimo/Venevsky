@@ -1,37 +1,34 @@
-.popup.mfp-hide#popup-consultation
+.popup.mfp-hide#popup-upgrade
 	.hide-on-success
 		.popup__header
-			span.popup__title Получить консультацию
+			span.popup__title Что можно улучшить на этой странице?
 			.popup__close
 				+icon("close","popup__close-icon")
 		.popup__body
 			form.form(action="")
 				.form__body
 					.form-line
+						.form-group.form-group--required
+							label.form-group__label Вопрос или коментарий
+							textarea(name="requ-textarea" placeholder="Здравствуйте, на этой странице можно...").textarea-field
+					.form-line
+						.form-group.form-group--width-m
+							label.form-group__label Электронная почта
+							input(type="email" name="email" placeholder="Введите свой email").input-field
+						span.form-line__info.form-line__info--size-s Мы быстрее исправим ошибку, если сможем связатся с вами для уточнения информаци
+					.form-line
 						.form-group.form-group--required.form-group--width-m
 							label.form-group__label Контактный телефон
 							input(type="phone" name="phone" placeholder="+7(912)123-34-45").input-field
-					.form-line
-						.form-group
-							label.form-group__label Вопрос или коментарий
-							textarea(placeholder="Здравствуйте, меня интересует...").textarea-field
-					.form-line
-						.form-group
-							label.file-upload
-								input(type="file")
-								.file-upload__custom
-									+icon("attachment","file-upload__icon")
-									span.file-upload__text Прикрепить файл
 				.form__footer
 					.form-line
 						.form-group.form-group--width-m
-							input(type="submit" value="Получить консультацию").btn.btn--size-big
-						span.form-line__info.form-line__info--color-green Ответим в течении 10 минут
+							input(type="submit" value="Предложить улучшение").btn.btn--size-big
 					.form-line
 						p.form-info Задавая вопрос, вы соглашаетесь с <a href="" class="form-info__link">политикой конфиденциальности</a>
 	.show-on-success
 		.popup__header
-			span.popup__title Мы вам перезвоним
+			span.popup__title Что можно улучшить на этой странице?
 			.popup__close
 				+icon("close","popup__close-icon")
 		.popup__body
@@ -40,9 +37,10 @@
 					.form-success__info
 						span.form-success__text Номер вашей заявки
 						span.form-success__number 1234
-					p.form-success__description Менеджер позвонит на указанный телефон сегодня <b>до 14:43</b> по московскому времени.
+					p.form-success__description Спасибо за обратную связь!
+					p.form-success__description Мы рассмотрим ваши предложения в течении суток и свяжемся с вами в ближайшее время.
 				.form-success__block
-					span.form-success__label Не готовы ждать?
+					span.form-success__label Хотите поговорить с нами голосом?
 					.form-success__row
 						.form-success__col
 							.form-success-contacts

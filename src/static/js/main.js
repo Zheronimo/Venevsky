@@ -61,16 +61,45 @@ $(document).ready(function() {
 		});
 	};
 
-	$('file-upload input[type=file]').change(function() {
-		let fileName = $(this).val().replace(/.*\\/,"");
-		$(this).closest('.file-upload').find('.file-upload__text').html(fileName);
-	});
+	let formValidate = function () {
+		$('form').each(function () {
+			$(this).on('submit', function () {
+				$(this).validate({
+					rules: {
+						name: 'required',
+						phone: 'required',
+						"requ-textarea": 'required',
+						passworld: 'required'
+					},
+					messages: {
+						name: 'Введите корректное имя',
+						phone: 'Введите корректный номер',
+						"requ-textarea": 'Заполните поле',
+						passworld: 'Введите корректный пароль'
+					},
+					errorPlacement: function (error, element) {
+							element.attr("placeholder", error[0].outerText);
+						}
+				});
+
+				if ($(this).valid()) {
+					let wrap = $(this)[0].closest('.hide-on-success');
+					if (wrap) {
+						$(wrap).siblings('.show-on-success').show();
+						$(wrap).hide();
+					}
+				}
+				return false;
+			});
+		});
+	};
 
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	locationChoose();
 	popupLink();
+	formValidate();
 });
 
 let popularCategoriesSlider = function () {

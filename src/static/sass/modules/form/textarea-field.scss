@@ -6,7 +6,13 @@
 	background-color: $white;
 	box-shadow: none;
 	border: 1px solid $input-border-color;
-	@include placeholder {
+	&::placeholder {
 		color: $text-info-color;
+	}
+	&.error {
+		border-color: $warning-color;
+		&::placeholder {
+			color: $warning-color;
+		}
 	}
 }
