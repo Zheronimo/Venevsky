@@ -94,12 +94,32 @@ $(document).ready(function() {
 		});
 	};
 
+	let reviewLine = function () {
+		$(document).on('click','.review-line__number',function () {
+			let left = $(this).parent().position().left;
+			$(this).parent().siblings().removeClass('review-line__item--active');
+			$(this).parent().addClass('review-line__item--active');
+			$('.review-line').css('width',left - 1);
+		});
+	};
+
+	let contactsPopup = function () {
+		$(document).on('click','.contacts-popup__toggle',function () {
+			$(this).parent('.contacts-popup').addClass('contacts-popup--active');
+		});
+		$(document).on('click','.contacts-popup__close',function () {
+			$(this).closest('.contacts-popup').removeClass('contacts-popup--active');
+		});
+	};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	locationChoose();
 	popupLink();
 	formValidate();
+	reviewLine();
+	contactsPopup();
 });
 
 let popularCategoriesSlider = function () {
@@ -118,6 +138,64 @@ let popularCategoriesSlider = function () {
 $(window).on('resize', function () {
 	popularCategoriesSlider();
 });
+
+if ($('div').is('.contacts-popup__map')) {
+	ymaps.ready(function () {
+	    var myMapOffice = new ymaps.Map('popup-contacts-office', {
+	            center: [55.754578, 37.694953],
+	            zoom: 16
+	        }, {
+	            searchControlProvider: 'yandex#search'
+	        }),
+
+	        myPlacemark = new ymaps.Placemark(myMapOffice.getCenter(), {
+	            hintContent: 'Собственный значок метки',
+	            balloonContent: 'Это красивая метка'
+	        }, {
+	            // Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: 'static/img/general/mark.png',
+	            // Размеры метки.
+	            iconImageSize: [76, 89]
+	        });
+
+	    myMapOffice.geoObjects
+	        .add(myPlacemark);
+	        //Запрет на скролинг мышкой
+	    myMapOffice.behaviors.disable('scrollZoom');
+	    	//Отключение дополнительных инструментов
+	    myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+
+	    var myMapStock = new ymaps.Map('popup-contacts-stock', {
+	            center: [55.566373, 37.755856],
+	            zoom: 16
+	        }, {
+	            searchControlProvider: 'yandex#search'
+	        }),
+
+	        myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
+	            hintContent: 'Собственный значок метки',
+	            balloonContent: 'Это красивая метка'
+	        }, {
+	            // Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: 'static/img/general/mark.png',
+	            // Размеры метки.
+	            iconImageSize: [76, 89]
+	        });
+
+	    myMapStock.geoObjects
+	        .add(myPlacemark2);
+	        //Запрет на скролинг мышкой
+	    myMapStock.behaviors.disable('scrollZoom');
+	    	//Отключение дополнительных инструментов
+	    myMapStock.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+	});
+};
 
 
 //Полифил для IE11

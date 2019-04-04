@@ -94,11 +94,7 @@
 		&__description {
 			font-size: 14px;
 		}
-		&__label {
-			display: block;
-			font-size: 18px;
-			margin-bottom: 20px;
-		}
+		
 		&-contacts {
 			display: flex;
 			flex-direction: column;
@@ -120,5 +116,23 @@
 				font-size: 12px;
 			}
 		}
+	}
+}
+
+.fast-review-form {
+	padding: 20px 40px 30px;
+	background-color: $light-bg-color;
+	& > * {
+			margin: 20px 0px;
+			&:first-child { margin-top: 0; }
+			&:last-child { margin-bottom: 0; }
+		}
+	&__line {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) { margin-right: 10px; }
+		}
+		
 	}
 }

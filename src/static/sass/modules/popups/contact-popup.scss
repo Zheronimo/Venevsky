@@ -1,0 +1,84 @@
+.contacts-popup {
+	display: inline-block;
+	position: relative;
+	&.contacts-popup--active {
+		.contacts-popup__body {
+			display: flex;
+		}
+	}
+	&__toggle {
+		margin-left: 10px;
+		color: $white;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	&__body {
+		width: 690px;
+		display: none;
+		background-color: $white;
+		position: absolute;
+		bottom: 25px;
+		right: -20px;
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+		&::after {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 12px 12px 0 12px;
+			border-color: #ffffff transparent transparent transparent;
+			position: absolute;
+			right: 40px;
+			bottom: -12px;
+		}
+	}
+	&__map {
+		flex: 1;
+	}
+	&__info {
+		flex: 0 0 260px;
+		max-width: 260px;
+		width: 260px;
+		padding: 40px 20px;
+		color: $base-text-color;
+	}
+	&__close {
+		@include size(30px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		opacity: .2;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		@include shift();
+		&:hover {
+			opacity: .7;
+		}
+		&-icon {
+			@include size(16px);
+		}
+	}
+	&__title {
+		display: block;
+		font-size: 18px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+	&__text {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 10px;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	&__label {
+		font-size: 14px;
+		font-family: $boldest-font;
+	}
+}
