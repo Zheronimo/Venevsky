@@ -53,10 +53,12 @@
 		margin-left: 10px;
 		@include size(22px);
 		fill: $white;
+		@include tablets() { margin-left: 0; }
 	}
 	.input-field {
 		flex: 0 0 225px;
 		width: 225px;
+		@include tablets() { display: none; }
 	}
 }
 

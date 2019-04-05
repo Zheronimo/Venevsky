@@ -80,6 +80,9 @@ button {
 	margin: 0 auto;
 	padding: 0 80px;
 	position: relative;
+	@include tablets() {
+		padding: 0 20px;
+	}
 }
 
 

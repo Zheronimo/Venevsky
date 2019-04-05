@@ -4,6 +4,7 @@
 			flex: 1;
 			&:not(:last-child) {
 				margin-right: 30px;
+				@include tablets() { margin-right: 10px; }
 			}
 		}
 }

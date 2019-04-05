@@ -36,6 +36,19 @@ $(document).ready(function() {
 		});
 	};
 
+	/*let catalogNavHover = function () {
+		$('.catalog-nav__item').hover(
+			fnOver : function () {
+				let catalogBody = $(this).clsest('.catalof-nav__body');
+				catalogBody.css('width', 825);
+			},
+			fnOut : function () {
+				let catalogBody = $(this).closest('.catalof-nav__body');
+				catalogBody.css('width', 'auto');
+			}
+		);
+	};*/
+
 	let locationChoose = function () {
 		$(document).on('click','.location-question__btn',function () {
 			let answer = $(this).data('location');
@@ -115,6 +128,7 @@ $(document).ready(function() {
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
+	// catalogNavHover();
 	locationChoose();
 	popupLink();
 	formValidate();

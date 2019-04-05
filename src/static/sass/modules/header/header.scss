@@ -7,6 +7,9 @@
 		padding: 12px 0;
 		&__location {
 			margin-right: 80px;
+			@include tablets() {
+				margin-right: 40px;
+			}
 		}
 		&__user-nav {
 			margin-left: auto;
@@ -19,11 +22,35 @@
 		position: relative;
 		.container {
 			& > * {
-				&:not(:last-child) { margin-right: 40px; }
+				&:not(:last-child) { 
+					margin-right: 40px;
+					@include tablets() { margin-right: 30px; }
+				}
+			}
+		}
+		&__logo {
+			@include tablets() { order: 1; }
+		}
+		&__catalog-nav {
+			@include tablets() { order: 2; }
+		}
+		&__search {
+			@include tablets() { order: 3; }
+		}
+		&__order-callback {
+			@include tablets() { 
+				order: 5;
+				margin-right: 0;
+
 			}
 		}
 		&__basket-prev {
 			margin-left: auto;
-		} 
+			@include tablets() { 
+				order: 4;
+				margin-left: 0;
+				margin-right: 30px;
+			}
+		}
 	}
 }
